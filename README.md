@@ -77,7 +77,8 @@ SVHN-object-detection(root)
       |   +-- json_to_VOC.py
       |   +-- mat_to_json.py     
       |   +-- MatTransform.json  
-      |   +-- VOC_to_yolo.py     
+      |   +-- VOC_to_yolo.py
+      |   +-- train_val_split.py
   |   +-- svhn.yaml
   +-- models
   +-- utils
@@ -109,6 +110,12 @@ $ python data/svhn/VOC_to_yolo.py
 ```
 
 Notice that folder ```trainval``` is on proper location(same as repository Struture).
+
+Finally, using ```train_val_split.py``` to split data, and it will remove training and validation data to train and val folder respectively.
+
+```py
+$ python data/svhn/train_val_split.py
+```
 
 ## Training
 

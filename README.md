@@ -30,6 +30,7 @@ All requirements should be detailed in requirements.txt.
 $ conda create -n YOLOv5 python=3.7 -y
 $ conda activate YOLOv5
 $ cd SVHN-object-detection
+$ conda install pytorch=1.10.0 torchvision=0.11.1 -c pytorch
 $ pip install -r requirements.txt
 ```
 

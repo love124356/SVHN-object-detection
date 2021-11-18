@@ -2,6 +2,7 @@
 import os
 import xml.etree.ElementTree as ET
 
+
 def convert(size, box):
     print(size, box)
     dw = 1. / size[0]
@@ -21,7 +22,9 @@ def convert_annotation(image_id):
     # print(image_id)
     in_file = open('data/svhn/Annotations/{}'.format(image_id), 'rb')
 
-    out_file = open('data/svhn/trainval/{}'.format(image_id.replace('.xml','.txt')), 'w')
+    out_file = open('data/svhn/trainval/{}'.format(
+                    image_id.replace('.xml', '.txt')), 'w')
+
     tree = ET.parse(in_file)
     root = tree.getroot()
     size = root.find('size')
@@ -30,13 +33,14 @@ def convert_annotation(image_id):
 
     for obj in root.iter('object'):
         cls = obj.find('name').text
-        if cls == "10": # 10 to 0 digit
+        if cls == "10":  # 10 to 0 digit
             cls = "0"
         xmlbox = obj.find('bndbox')
-        b = (float(xmlbox.find('xmin').text), float(xmlbox.find('xmax').text), float(xmlbox.find('ymin').text),
-             float(xmlbox.find('ymax').text))
+        b = (float(xmlbox.find('xmin').text), float(xmlbox.find('xmax').text),
+             float(xmlbox.find('ymin').text), float(xmlbox.find('ymax').text))
         bb = convert((w, h), b)
         out_file.write(str(cls) + " " + " ".join([str(a) for a in bb]) + '\n')
+
 
 if __name__ == "__main__":
     image_ids_train = os.listdir("data/svhn/Annotations")

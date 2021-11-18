@@ -2,7 +2,6 @@ import matplotlib.image as image
 import json
 import os
 
-    
 headstr = """\
 <annotation>
     <folder>VOC2007</folder>
@@ -38,18 +37,19 @@ objstr = """\
         </bndbox>
     </object>
 """
- 
+
 tailstr = '''\
 </annotation>
 '''
 if __name__ == "__main__":
-    with open("data/svhn/MatTransform.json",'r',encoding='utf-8') as json_file:
+    json_path = "data/svhn/MatTransform.json"
+    with open(json_path, 'r', encoding='utf-8') as json_file:
         data = json.load(json_file)
-    
+
     print("Make folder Annotations")
     os.makedirs('data/svhn/Annotations/', exist_ok=True)
     # os.makedirs('data/svhn/trainval/', exist_ok=True)
-    
+
     dir = 'data/svhn/trainval/'
     for i in data:
         # print(i)
@@ -57,7 +57,7 @@ if __name__ == "__main__":
         head = headstr % (i, img.shape[1], img.shape[0], img.shape[2])
         tail = tailstr
         objs = data[i]
-        
+
         def write_xml(anno_path, head, objs, tail):
             f = open(anno_path, "w")
             f.write(head)
@@ -67,7 +67,7 @@ if __name__ == "__main__":
                 ymin = objs['top'][i]
                 xmax = objs['left'][i]+objs['width'][i]
                 ymax = objs['height'][i]+objs['top'][i]
-                f.write(objstr % (label, xmin, ymin,xmax ,  ymax))
+                f.write(objstr % (label, xmin, ymin, xmax, ymax))
             f.write(tail)
         anno_path = 'data/svhn/Annotations/' + i.split(".")[0] + '.xml'
         write_xml(anno_path, head, objs, tail)

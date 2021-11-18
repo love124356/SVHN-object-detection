@@ -5,6 +5,7 @@ import json
 
 bbox_prop = ['height', 'left', 'top', 'width', 'label']
 
+
 def get_img_name(f, idx=0):
     img_name = ''.join(map(chr, f[names[idx][0]][()].flatten()))
     return(img_name)
@@ -12,12 +13,13 @@ def get_img_name(f, idx=0):
 
 def get_img_boxes(f, idx=0):
     """
-    get the 'height', 'left', 'top', 'width', 'label' of bounding boxes of an image
+    get the 'height', 'left', 'top', 'width', 'label' of
+    bounding boxes of an image.
     :param f: h5py.File
     :param idx: index of the image
     :return: dictionary
     """
-    meta = { key : [] for key in bbox_prop}
+    meta = {key: [] for key in bbox_prop}
 
     box = f[bboxs[idx][0]]
     for key in box.keys():
@@ -53,13 +55,10 @@ if __name__ == "__main__":
         name = get_img_name(f, i)
         annotations[name] = get_img_boxes(f, i)
 
-
-    # Write the list to answer.json 
+    # Write the list to answer.json
     json_object = json.dumps(annotations)
 
     with open("data/svhn/MatTransform.json", "w") as outfile:
         outfile.write(json_object)
 
     print("DONE.")
-
-

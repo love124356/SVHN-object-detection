@@ -26,7 +26,7 @@ Speed.ipynb: Google Colab
 ## Requirement
 All requirements should be detailed in requirements.txt.
 
-```env
+```envs
 $ conda create -n YOLOv5 python=3.7 -y
 $ conda activate YOLOv5
 $ cd SVHN-object-detection
@@ -102,7 +102,7 @@ You can use ```mat_to_json.py``` to parse 'digitStruct.mat' file to .json file a
 
 Next, using  ```VOC_to_yolo.py``` to make training set .txt (about info) for YOLOv5.
 
-``` 
+```py
 $ python data/svhn/mat_to_json.py
 $ python data/svhn/json_to_VOC.py
 $ python data/svhn/VOC_to_yolo.py
@@ -121,7 +121,7 @@ val: data/svhn/val  # 3000 images
 
 To train the model, run this command:
 
-```train
+```py
 $ python train.py --img 320  --epochs 100 --batch 16 --data svhn.yaml --weights yolov5m.pt
 ```
 
@@ -135,7 +135,7 @@ Please download [this model]() if you want to reproduce my submission file, and 
 
 To reproduce my submission file or test the model you trained, run:
 
-```test
+```py
 $ python detect.py --source data/svhn/test/ --weights runs/train/exp{int}/weights/best.pt --conf 0.25 --save-conf --save-txt 
 $ python inference.py --txt runs/detect/exp/labels/ --data data/svhn/test/
 ```

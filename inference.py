@@ -10,15 +10,15 @@ def infer(opt):
     txt_dir = os.listdir(opt.txt)
     # Read image (Be careful with the image order)
     # print(len(txt_dir))
-    txt_dir.sort(key = lambda x: int(x[:-4]))
+    txt_dir.sort(key=lambda x: int(x[:-4]))
     for txt_name in tqdm(txt_dir):
-        img_name = txt_name.replace(".txt",".png")
+        img_name = txt_name.replace(".txt", ".png")
         img_path = os.path.join(opt.data, img_name)
         img = cv2.imread(img_path)
         h, w, c = img.shape
 
         txt_path = os.path.join(opt.txt, txt_name)
-        f = open(txt_path,'r')
+        f = open(txt_path, 'r')
         contents = f.readlines()
         for content in contents:
             ans = {}
@@ -46,8 +46,10 @@ def infer(opt):
 
 def parse_opt():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--txt', type=str, default='runs/detect/exp/labels/', help='training labels txt path')
-    parser.add_argument('--data', type=str, default='data/svhn/test/', help='testing data path')
+    parser.add_argument('--txt', type=str, default='runs/detect/exp/labels/',
+                        help='training labels txt path')
+    parser.add_argument('--data', type=str, default='data/svhn/test/',
+                        help='testing data path')
 
     opt = parser.parse_args()
     return opt

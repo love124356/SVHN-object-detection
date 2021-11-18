@@ -115,8 +115,8 @@ Notice that folder ```trainval``` is on proper location(same as repository Strut
 Before training, you need to split training and validation sets. Next, modifying train and val path in ```data/svhn.yaml```. 
 
 ```yaml
-train: data/svhn/train  # 33402 images
-val: data/svhn/val  # 3000 images
+train: data/svhn/train  # 26722 images
+val: data/svhn/val  # 6680 images
 ```
 
 To train the model, run this command:

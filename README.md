@@ -26,7 +26,7 @@ Speed.ipynb: Google Colab
 ## Requirement
 All requirements should be detailed in requirements.txt.
 
-```envs
+```env
 $ conda create -n YOLOv5 python=3.7 -y
 $ conda activate YOLOv5
 $ cd SVHN-object-detection

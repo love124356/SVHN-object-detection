@@ -1,0 +1,9 @@
+# Path
+train: data/svhn/train  # 26722images
+val: data/svhn/val  #  6680images
+
+# number of classes
+nc: 10
+
+# class names
+names: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']

@@ -1,0 +1,7 @@
+data/svhn/test
+data/svhn/train
+data/svhn/val
+data/svhn/trainval
+data/svhn/Annotations
+data/svhn/MatTransform.json
+data/svhn/digitStruct.mat

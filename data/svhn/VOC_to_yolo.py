@@ -4,7 +4,7 @@ import xml.etree.ElementTree as ET
 
 
 def convert(size, box):
-    print(size, box)
+    # print(size, box)
     dw = 1. / size[0]
     dh = 1. / size[1]
     x = (box[0] + box[1]) / 2.0

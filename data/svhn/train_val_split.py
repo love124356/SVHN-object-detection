@@ -11,6 +11,9 @@ if __name__ == "__main__":
 
     # print(train_set)
     # print(val_set)
+    print("Make folder val/train")
+    os.makedirs('data/svhn/val/', exist_ok=True)
+    os.makedirs('data/svhn/train/', exist_ok=True)
     train_val_path = 'data/svhn/trainval/'
     train_path = 'data/svhn/train/'
     val_path = 'data/svhn/val/'

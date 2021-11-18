@@ -110,9 +110,7 @@ $ python data/svhn/json_to_VOC.py
 $ python data/svhn/VOC_to_yolo.py
 ```
 
-Notice that folder ```trainval``` is on proper location(same as repository Struture).
-
-Finally, using ```train_val_split.py``` to split data, and it will remove training and validation data to train and val folder respectively.
+Finally, using ```train_val_split.py``` to split data, and it will *move* training and validation data to train and val folder respectively. The trainval folder will be empty.
 
 ```py
 $ python data/svhn/train_val_split.py
@@ -125,6 +123,8 @@ Before training, you need to split training and validation sets. Next, modifying
 ```yaml
 train: data/svhn/train  # 26722 images
 val: data/svhn/val  # 6680 images
+nc: 10  # class number
+names: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']  # class names
 ```
 
 To train the model, run this command:

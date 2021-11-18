@@ -71,4 +71,4 @@ if __name__ == "__main__":
             f.write(tail)
         anno_path = 'data/svhn/Annotations/' + i.split(".")[0] + '.xml'
         write_xml(anno_path, head, objs, tail)
-        print("DONE.")
+    print("DONE.")

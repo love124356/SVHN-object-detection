@@ -41,33 +41,33 @@ Official images can be downloaded from [CodaLab competition](https://competition
 The repository structure is:
 ```
 SVHN-object-detection(root)
-  +-- data                     # all file used in the program 
+  +-- data                       # all files and script used in the program 
   |   +-- hyps
   |   +-- scripts
   |   +-- svhn
-      |   +-- Annotations
+      |   +-- Annotations        # training set .xml
           |   +-- 1.xml   
           |   +-- 2.xml   
           |   +-- 3.xml   
           |   +-- ......
-      |   +-- test          
+      |   +-- test               # testing set .png  
           |   +-- 117.png  
           |   +-- 162.png 
           |   +-- 196.png  
           |   +-- ......
-      |   +-- train
+      |   +-- train              # training set .png /.txt
           |   +-- 1.png   
           |   +-- 1.txt   
           |   +-- 2.png 
           |   +-- 2.txt 
           |   +-- ......
-      |   +-- trainval
+      |   +-- trainval           # training and validation sets .png /.txt
           |   +-- 1.png   
           |   +-- 1.txt   
           |   +-- 2.png 
           |   +-- 2.txt 
           |   +-- ......
-      |   +-- val
+      |   +-- val                # validation set .png /.txt
           |   +-- 1.png   
           |   +-- 1.txt   
           |   +-- 2.png 
@@ -75,26 +75,31 @@ SVHN-object-detection(root)
           |   +-- ......
       |   +-- digitStruct.mat
       |   +-- json_to_VOC.py
-      |   +-- mat_to_json.py
-      |   +-- MatTransform.json
-      |   +-- VOC_to_yolo.py
+      |   +-- mat_to_json.py     
+      |   +-- MatTransform.json  
+      |   +-- VOC_to_yolo.py     
   |   +-- svhn.yaml
-  +-- models                    # all trained models
-  +-- utils                   # confusion matrix of two models and answer.txt save here
+  +-- models
+  +-- utils
   +-- runs
   |   +-- detect                 # run detect.py and testing .png /.txt save here.
+      |   +-- labels
+      |   +-- 1.png
+      |   +-- 2.png
+      |   +-- ......
   |   +-- train                  # run train.py and training info save here.
-  +-- detect.py               # set a dataset class for loading imgs
-  +-- inference.py             # reproduce my submission file or test your model
-  +-- train.py                 # for training model
+  +-- detect.py                  # model prediction
+  +-- inference.py               # reproduce my submission file
+  +-- train.py                   # for training model
   +-- hubconf.py
-  +-- Speed.ipynb
-  +-- requirements.txt          # txt file for establishing the environment
+  +-- Speed.ipynb                # for testing detector speed
+  +-- requirements.txt           # txt file for establishing the environment
 ```
 
 ## Dataset setting
 
 You can use ```mat_to_json.py``` to parse 'digitStruct.mat' file to .json file and then use ```json_to_VOC.py``` transfer to VOC format. This can use in MMDetection.
+
 Next, using  ```VOC_to_yolo.py``` to make training set .txt (about info) for YOLOv5.
 
 ``` 

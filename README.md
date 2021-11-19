@@ -147,7 +147,9 @@ To reproduce my submission file or test the model you trained, run:
 $ python detect.py --source data/svhn/test/ --img 320 --weights runs/train/exp/weights/best.pt --conf 0.25 --save-conf --save-txt 
 $ python inference.py --txt runs/detect/exp/labels/ --data data/svhn/test/
 ```
-Note the path of model  and testing data. *--source {testing set path} --weight {your model path}, --data  {testing set path}*
+
+Note the path of model and testing data. 
+```--source {testing set path} --weight {your model path}, --data  {testing set path}```
 
 Prediction file will be saved as ```root/answer.json```
 

@@ -144,7 +144,7 @@ Please download [this model]() if you want to reproduce my submission file, and 
 To reproduce my submission file or test the model you trained, run:
 
 ```py
-$ python detect.py --source data/svhn/test/ --weights runs/train/exp{int}/weights/best.pt --conf 0.25 --save-conf --save-txt 
+$ python detect.py --source data/svhn/test/ --img 320 --weights runs/train/exp{int}/weights/best.pt --conf 0.25 --save-conf --save-txt 
 $ python inference.py --txt runs/detect/exp/labels/ --data data/svhn/test/
 ```
 

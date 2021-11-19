@@ -1,6 +1,6 @@
 import os
 import cv2
-import tqdm
+from tqdm import tqdm
 import json
 import argparse
 
@@ -41,7 +41,7 @@ def infer(opt):
     json_object = json.dumps(prediction, indent=4)
     with open("answer.json", "w") as outfile:
         outfile.write(json_object)
-    print("DONE. Answer.json is saved in root.")
+    print("DONE. answer.json is saved in root.")
 
 
 def parse_opt():

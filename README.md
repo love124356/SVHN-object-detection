@@ -154,9 +154,10 @@ Prediction file will be saved as ```root/answer.json```
 
 Our model achieves the following performance on :
 
-|         | YOLOv5m          | YOLOv5l          |
-|---------|------------------|------------------|
-| mAP     | 0.410383 | 0.412982 |
-| Speed   | 0.0692 | 0.0848 |
-| Note    | default, img=320 | default, img=320 |
+|         | YOLOv5m         | YOLOv5l         | YOLOv5m                                 |
+|:-------:|:---------------:|:---------------:|:------------------------------------------:|
+| mAP     | 0.410383 | 0.412982 | 0.409623 |
+| Speed   | 0.068377 | 0.084223 | 0.069073 |
+| Note    | default command | default command | default command, change train and val data |
+
 

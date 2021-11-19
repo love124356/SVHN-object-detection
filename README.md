@@ -154,8 +154,9 @@ Prediction file will be saved as ```root/answer.json```
 
 Our model achieves the following performance on :
 
-|         | YOLOv5m | YOLOv5l |
-|---------|---------|---------|
+|         | YOLOv5m          | YOLOv5l          |
+|---------|------------------|------------------|
 | mAP     | 0.410383 | 0.412982 |
-| Speed   | 0.0692   | 0.0848 |
+| Speed   | 0.0692 | 0.0848 |
+| Note    | default, img=320 | default, img=320 |
 

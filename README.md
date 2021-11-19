@@ -13,6 +13,10 @@ To reproduce my submission without retrainig, do the following steps:
 2. [Repository Structure](#Repository-Structure)
 3. [Inference](#Inference)
 
+or
+
+[Inference.ipynb]() link in Google Colab.
+
 ## Hardware
 
 Ubuntu 18.04.5 LTS
@@ -139,6 +143,10 @@ All mAP and speed of experiments will be written in [Results](#Results).
 
 ## Inference
 
+Use [Inference.ipynb]() in Google Colab.
+
+or 
+
 Please download [this model]() if you want to reproduce my submission file, and run above codes.
 
 To reproduce my submission file or test the model you trained, run:
@@ -163,4 +171,7 @@ Our model achieves the following performance on :
 | Speed   | 0.067701 | 0.084223 | 0.069073 |
 | Note    | default command | default command | default command, change train and val data |
 
-
+## Reference
+[1] [YOLOv5](https://github.com/ultralytics/yolov5)
+[2] [YOLO format](https://github.com/pjreddie/darknet/blob/master/scripts/voc_label.py)
+[3] [VOC format](https://github.com/ethanliuzhuo/mmdetection-in-SVHN)

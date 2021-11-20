@@ -15,7 +15,7 @@ To reproduce my submission without retrainig, do the following steps:
 
 or
 
-[Inference.ipynb]() link in Google Colab.
+[Inference.ipynb]() in Google Colab.
 
 ## Hardware
 
@@ -73,10 +73,10 @@ SVHN-object-detection(root)
           |   +-- 2.txt 
           |   +-- ......
       |   +-- val                # validation set .png /.txt
-          |   +-- 1.png   
-          |   +-- 1.txt   
-          |   +-- 2.png 
-          |   +-- 2.txt 
+          |   +-- 22599.png   
+          |   +-- 22599.txt   
+          |   +-- 22600.png 
+          |   +-- 22600.txt 
           |   +-- ......
       |   +-- digitStruct.mat
       |   +-- json_to_VOC.py
@@ -90,10 +90,13 @@ SVHN-object-detection(root)
   +-- runs
   |   +-- detect                 # run detect.py and testing .png /.txt save here.
       |   +-- labels
+          |   +-- 1.txt  
+          |   +-- 2.txt  
+          |   +-- ......
       |   +-- 1.png
       |   +-- 2.png
       |   +-- ......
-  |   +-- train                  # run train.py and training info save here.
+  |   +-- train                  # run train.py and training info save here
   +-- detect.py                  # model prediction
   +-- inference.py               # reproduce my submission file
   +-- train.py                   # for training model
@@ -168,7 +171,7 @@ Our model achieves the following performance on :
 |         | YOLOv5m         | YOLOv5l         | YOLOv5m                                 |
 |:-------:|:---------------:|:---------------:|:------------------------------------------:|
 | mAP     | 0.410383 | 0.412982 | 0.409623 |
-| Speed   | 0.067701 | 0.084223 | 0.069073 |
+| Speed   | 0.066993 | 0.084223 | 0.069073 |
 | Note    | default command | default command | default command, change train and val data |
 
 ## Reference

@@ -171,7 +171,7 @@ Our model achieves the following performance on :
 |         | YOLOv5m         | YOLOv5l         | YOLOv5m                                 |
 |:-------:|:---------------:|:---------------:|:------------------------------------------:|
 | mAP     | 0.410383 | 0.412982 | 0.409623 |
-| Speed   | 0.066993 | 0.084223 | - |
+| Speed   | 0.066993 | 0.081104 | - |
 | Note    | default command | default command | default command, change train and val sets |
 
 ## Reference

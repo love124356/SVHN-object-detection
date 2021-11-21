@@ -13,9 +13,9 @@ To reproduce my submission without retrainig, do the following steps:
 2. [Repository Structure](#Repository-Structure)
 3. [Inference](#Inference)
 
-or
+                    or
 
-[Inference.ipynb]() in Google Colab.
+    [Inference.ipynb](https://reurl.cc/yeaqkq) in Google Colab.
 
 ## Hardware
 
@@ -140,17 +140,17 @@ To train the model, run this command:
 $ python train.py --img 320  --epochs 100 --batch 16 --data svhn.yaml --weights yolov5m.pt
 ```
 
-Trained model will be saved as ```runs/train/exp{int}/weights/best.pt```
+Trained model will be saved as ```runs/train/exp/weights/best.pt```
 
 All mAP and speed of experiments will be written in [Results](#Results).
 
 ## Inference
 
-Use [Inference.ipynb]() in Google Colab.
+Use [Inference.ipynb](https://reurl.cc/yeaqkq) in Google Colab.
 
 or 
 
-Please download [this model]() if you want to reproduce my submission file, and run above codes.
+Please download [this model](https://reurl.cc/0xe31o) if you want to reproduce my submission file, and run above codes.
 
 To reproduce my submission file or test the model you trained, run:
 
@@ -171,10 +171,12 @@ Our model achieves the following performance on :
 |         | YOLOv5m         | YOLOv5l         | YOLOv5m                                 |
 |:-------:|:---------------:|:---------------:|:------------------------------------------:|
 | mAP     | 0.410383 | 0.412982 | 0.409623 |
-| Speed   | 0.066993 | 0.084223 | 0.069073 |
-| Note    | default command | default command | default command, change train and val data |
+| Speed   | 0.066993 | 0.084223 | - |
+| Note    | default command | default command | default command, change train and val sets |
 
 ## Reference
 [1] [YOLOv5](https://github.com/ultralytics/yolov5)
+
 [2] [YOLO format](https://github.com/pjreddie/darknet/blob/master/scripts/voc_label.py)
+
 [3] [VOC format](https://github.com/ethanliuzhuo/mmdetection-in-SVHN)

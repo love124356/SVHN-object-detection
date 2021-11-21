@@ -13,9 +13,9 @@ To reproduce my submission without retrainig, do the following steps:
 2. [Repository Structure](#Repository-Structure)
 3. [Inference](#Inference)
 
-                    or
+   or
 
-    [Inference.ipynb](https://reurl.cc/yeaqkq) in Google Colab.
+   [Inference.ipynb](https://reurl.cc/yeaqkq) in Google Colab.
 
 ## Hardware
 

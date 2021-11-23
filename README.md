@@ -15,7 +15,7 @@ To reproduce my submission without retrainig, do the following steps:
 
    or
 
-   [Inference.ipynb](https://reurl.cc/yeaqkq) in Google Colab.
+   [Inference.ipynb](https://reurl.cc/ZjdKNM) in Google Colab.
 
 ## Hardware
 
@@ -137,7 +137,7 @@ names: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']  # class names
 To train the model, run this command:
 
 ```py
-$ python train.py --img 320  --epochs 100 --batch 16 --data svhn.yaml --weights yolov5m.pt
+$ python train.py --epochs 100 --data svhn.yaml --weights yolov5m.pt
 ```
 
 Trained model will be saved as ```runs/train/exp/weights/best.pt```
@@ -146,16 +146,16 @@ All mAP and speed of experiments will be written in [Results](#Results).
 
 ## Inference
 
-Use [Inference.ipynb](https://reurl.cc/yeaqkq) in Google Colab.
+Use [Inference.ipynb](https://reurl.cc/ZjdKNM) in Google Colab.
 
 or 
 
-Please download [this model](https://reurl.cc/0xe31o) if you want to reproduce my submission file, and run above codes.
+Please download [this model](https://reurl.cc/WXY6bL) if you want to reproduce my submission file, and run above codes.
 
 To reproduce my submission file or test the model you trained, run:
 
 ```py
-$ python detect.py --source data/svhn/test/ --img 320 --weights runs/train/exp/weights/best.pt --conf 0.25 --save-conf --save-txt 
+$ python detect.py --source data/svhn/test/ --weights runs/train/exp/weights/best.pt --save-conf --save-txt 
 $ python inference.py --txt runs/detect/exp/labels/ --data data/svhn/test/
 ```
 
@@ -168,11 +168,11 @@ Prediction file will be saved as ```root/answer.json```
 
 Our model achieves the following performance on :
 
-|         | YOLOv5m         | YOLOv5l         | YOLOv5m                                 |
-|:-------:|:---------------:|:---------------:|:------------------------------------------:|
-| mAP     | 0.410383 | 0.412982 | 0.409623 |
-| Speed   | 0.066993 | 0.081104 | - |
-| Note    | default command | default command | default command, change train and val sets |
+|         | YOLOv5m          | YOLOv5l          | YOLOv5m                                   | YOLOv5m         |
+|:-------:|:----------------:|:----------------:|:-------------------------------------------:|:-----------------:|
+| mAP     | 0.410383 | 0.412982 | 0.409623 | 0.410516 |
+| Speed   | -                | 0.081104 | -                                           | 0.066749 |
+| Note    | img 320 epoch100 | img 320 epoch100 | img 320 epoch100, change train and val sets | default, epoch100 |
 
 ## Reference
 [1] [YOLOv5](https://github.com/ultralytics/yolov5)

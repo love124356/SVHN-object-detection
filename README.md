@@ -15,7 +15,7 @@ To reproduce my submission without retrainig, do the following steps:
 
    or
 
-   [Inference.ipynb](https://reurl.cc/ZjdKNM) in Google Colab.
+Just use [Inference.ipynb](https://reurl.cc/ZjdKNM) in Google Colab.
 
 ## Hardware
 
